@@ -14,6 +14,9 @@ class Plugin extends Base
         // Helper
         $this->helper->register('taskSelectorHelper', '\Kanboard\Plugin\TaskSelector\Helper\TaskSelectorHelper');
 
+        // CSS - Asset Hook
+        $this->hook->on('template:layout:css', array('template' => 'plugins/TaskSelector/Assets/css/task-selector.min.css'));
+
         // Template Override
         $this->template->setTemplateOverride('header', 'TaskSelector:header');
     }
