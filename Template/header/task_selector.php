@@ -1,4 +1,4 @@
-<?= $this->app->component('select-dropdown-autocomplete task-selector', array(
+<?= $this->taskSelectorHelper->componentTaskSelector('select-dropdown-autocomplete', array(
     'name' => 'taskId',
     'placeholder' => t('Display another task'),
     'ariaLabel' => t('Display another task'),
@@ -11,4 +11,3 @@
         'task.selector.open',
     )
 )) ?>
-

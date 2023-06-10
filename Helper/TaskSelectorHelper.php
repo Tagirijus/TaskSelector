@@ -14,12 +14,11 @@ class TaskSelectorHelper extends Base
      *
      * @param  string $name
      * @param  array  $params
-     * @param  string $searchUrl
      * @return string
      */
-    public function componentAJAX($name, array $params = array(), $searchUrl = '')
+    public function componentTaskSelector($name, array $params = array())
     {
-        return '<div class="js-'.$name.'" data-params=\''.json_encode($params, JSON_HEX_APOS).'\' data-search-url="' . $searchUrl . '"></div>';
+        return '<div class="task-selector js-'.$name.'" data-params=\''.json_encode($params, JSON_HEX_APOS).'\'"></div>';
     }
 
     /**
