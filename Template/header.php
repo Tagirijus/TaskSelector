@@ -15,11 +15,22 @@
     <div class="title-container">
         <?= $_title ?>
     </div>
+
+    <!-- TASK SELECTOR HERE -->
+
+    <?php
+        $task_selector = $this->taskSelectorHelper->get10LastTasks();
+
+    ?>
+
     <div class="board-selector-container">
         <?php if (! empty($task_selector)): ?>
-            <?= $this->render('header/task_selector', array('task_selector' => $task_selector)) ?>
+            <?= $this->render('TaskSelector:header/task_selector', array('task_selector' => $task_selector)) ?>
         <?php endif ?>
     </div>
+
+    <!-- TASK SELECTOR TILL HERE -->
+
     <div class="board-selector-container">
         <?php if (! empty($board_selector)): ?>
             <?= $this->render('header/board_selector', array('board_selector' => $board_selector)) ?>
