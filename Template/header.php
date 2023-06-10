@@ -16,6 +16,11 @@
         <?= $_title ?>
     </div>
     <div class="board-selector-container">
+        <?php if (! empty($task_selector)): ?>
+            <?= $this->render('header/task_selector', array('task_selector' => $task_selector)) ?>
+        <?php endif ?>
+    </div>
+    <div class="board-selector-container">
         <?php if (! empty($board_selector)): ?>
             <?= $this->render('header/board_selector', array('board_selector' => $board_selector)) ?>
         <?php endif ?>
